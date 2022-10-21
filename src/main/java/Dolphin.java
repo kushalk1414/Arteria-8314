@@ -2,9 +2,22 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 public class Dolphin extends Mammal implements Showtime {
   private static Logger LOGGER = LoggerFactory.getLogger(Dolphin.class);
+
+
   public Dolphin(final String name) {
     super(name);
     this.movementType = " swims";
+  }
+
+  public void feed() {
+    if (isAlive) {
+      energy ++;
+      if (energy > 7) {
+        LOGGER.info(name + " is fed but needs to exercise");
+      } else {
+        LOGGER.info(name + " jumps out of the water to eat some fish food balls");
+      }
+    }
   }
 
   @Override

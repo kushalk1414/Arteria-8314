@@ -9,12 +9,12 @@ public class Main {
   Butterfly pox = new Butterfly("pox");
   Zoo bavaria = new Zoo("bavaria", dee, delphi, bree, tea, mico, pox );
 
-  bavaria.dolphin.practice();
-  bavaria.dolphin.perform();
-    bavaria.parrot.animalType();
-    bavaria.parrot.perform();
-
-
+    bree.feed();
+    bree.feed();bree.feed();
+    bree.feed();
+    bree.feed();
+    final int energy = bree.energy;
+    System.out.println(energy);
 
 
   }

@@ -1,7 +1,7 @@
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Animal {
+public abstract class Animal {
   private static Logger LOGGER = LoggerFactory.getLogger(Animal.class);
 
   public boolean cageClosed;
@@ -20,22 +20,11 @@ public class Animal {
   }
 
 
-
-
-  public void feed() {
-    if (isAlive) {
-      energy++;
-      if (energy > 7) {
-        LOGGER.info(name + " is fed but needs to exercise");
-      } else {
-        LOGGER.info(name + " eats some food");
-      }
-    }
-  }
+  public abstract void feed();
 
   public void examine() {
     if (isAlive) {
-      LOGGER.info(name + " examines the cage. " + (cageClosed ? name + " goes back." : name + " tries has escaped"));
+      LOGGER.info(name + " examines the cage. " + (cageClosed ? name + " goes back." : name + " has escaped"));
     }
   }
 

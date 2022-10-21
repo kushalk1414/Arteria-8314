@@ -8,6 +8,18 @@ public class Tiger extends Mammal{
     super(name);
   }
 
+
+  public void feed() {
+    if (isAlive) {
+      energy += 2;
+      if (energy > 10) {
+        LOGGER.info(name + " is fed but needs to exercise");
+      } else {
+        LOGGER.info(name + " eats the meat");
+      }
+    }
+  }
+
   @Override
   public void examine() {
     if (isAlive) {
@@ -15,6 +27,7 @@ public class Tiger extends Mammal{
 
     }
   }
+
 
   //public void attack(){
   //Zoo.dolphin.isAlive = false;

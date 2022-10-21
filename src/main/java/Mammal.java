@@ -1,7 +1,10 @@
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Mammal extends Animal{
+public abstract class Mammal extends Animal{
+
+  public abstract void feed();
+
   private static Logger LOGGER = LoggerFactory.getLogger(Mammal.class);
   public int bodytemp = 36;
   public Mammal(final String name) {
@@ -29,9 +32,11 @@ public class Mammal extends Animal{
     regulatetemp(3);
   }
 
+ @Override
   public void rest(){
     energy = 4;
     bodytemp = 36;
+    isHealthy = true;
   }
 
   public void unstableTemp(){

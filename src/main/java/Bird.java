@@ -1,7 +1,7 @@
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Bird extends Animal{
+public abstract class Bird extends Animal{
   private static Logger LOGGER = LoggerFactory.getLogger(Animal.class);
 
 
@@ -9,4 +9,10 @@ public class Bird extends Animal{
     super(name);
     this.movementType = " flies";
   }
+
+  public abstract void feed();
+
+  public abstract Object birth();
+
+
 }
